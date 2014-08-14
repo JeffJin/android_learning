@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/build/intermediates/pre-dexed/debug/android-support-v4-106fe55e6c71fd1134cec1cf1ac5c247bfee0bf9.jar"
+        jar="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ded9acc6a9792b8f1afc470f0c9cd36d178914cd"/>
+    <item
+        dex="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/build/intermediates/pre-dexed/debug/gson-2.2.4-2b397d63c327f2997038242426dd7adecc672d41.jar"
+        jar="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/libs/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8"/>
+    <item
+        dex="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/build/intermediates/pre-dexed/debug/ion-1.2.7-89861905c4c8a55b554787c1a736debcd2ab7110.jar"
+        jar="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/libs/ion-1.2.7.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a422832b5d331f7131025885b5ef2d06722e6b71"/>
+    <item
+        dex="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/build/intermediates/pre-dexed/debug/photo-view-bd019272a564fc4d3432c6a4bbb0687b5ee5241d.jar"
+        jar="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/libs/photo-view.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="fd10ee61af7c1524267d380aaaf356880545af15"/>
+    <item
+        dex="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/build/intermediates/pre-dexed/debug/androidasync-1.2.6-b7b9b30ffdfc546f8e0ff2c961efaa11cadd38a5.jar"
+        jar="/Users/jeffjin/AndroidStudioProjects/Intellibeacons_droid/app/libs/androidasync-1.2.6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7937385823398979dd9dabcc3a3938e97df167cf"/>
+
+</pre-dex-items>

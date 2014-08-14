@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.intellibeacons.app" >
+  <uses-sdk
+      android:minSdkVersion="14"
+      android:targetSdkVersion="19" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+  <application
+      android:allowBackup="true"
+      android:icon="@drawable/ic_launcher"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme" >
+    <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".IndoorMapActivity"
+        android:label="@string/title_activity_indoor_map" >
+      <intent-filter>
+        <action android:name="com.intellibeacons.action.INDOORMAP" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ImageSliderActivity"
+        android:label="@string/title_activity_image_slider" >
+      <intent-filter>
+        <action android:name="com.intellibeacons.action.INDOORMAP" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ImageChooserActivity"
+        android:label="@string/title_activity_image_chooser" >
+    </activity>
+  </application>
+
+</manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Course Titles -->
+  <string-array name="images_list">
+    <item>p1</item>
+    <item>p2</item>
+    <item>p3</item>
+    <item>p4</item>
+    <item>p5</item>
+    <item>p6</item>
+
+  </string-array>
+
+  <!-- Course Descriptions -->
+  <string-array name="image_titles">
+    <item>Title for p1</item>
+    <item>Title for p2</item>
+    <item>Title for p3</item>
+    <item>Title for p4</item>
+    <item>Title for p5</item>
+    <item>Title for p6</item>
+
+  </string-array>
+</resources>

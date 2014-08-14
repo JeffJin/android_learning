@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.intellibeacons.app.ImageChooserActivity">
+
+  <fragment android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:name="com.intellibeacons.app.ImageBrowserFragment"
+            android:layout_weight="1"
+            android:id="@+id/imageListFragment"/>
+
+  <fragment android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:name="com.intellibeacons.app.ImageFragment"
+            android:id="@+id/imageFragment"
+            android:layout_weight="4"/>
+
+</LinearLayout>

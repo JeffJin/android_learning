@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intellibeacons.app.CommentFragment">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" android:layout_gravity="center_horizontal|bottom">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:text="@string/comment_title" android:background="#ffd2e5a3" android:id="@+id/commentTitle"
+        android:phoneNumber="true" android:inputType="text"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp" android:text="enter your comments here..."
+        android:id="@+id/editComment" android:layout_gravity="center" android:inputType="textMultiLine"/>
+  </LinearLayout>
+
+</FrameLayout>
