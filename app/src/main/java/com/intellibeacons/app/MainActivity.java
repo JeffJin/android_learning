@@ -9,6 +9,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,7 +66,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                btnReadFileOnClick((Button) view);
+                btnReadFileAsyncOnClick((Button) view);
             }
         });
 
@@ -143,10 +144,35 @@ public class MainActivity extends Activity {
 
     }
 
-    private void btnReadFileOnClick(Button view) {
+    private void btnReadFileAsyncOnClick(Button view) {
 
-        simpleRead();
+        final ProgressBar pb = (ProgressBar) findViewById(R.id.progressBarMain);
+        initializeProgressBar(pb);
+        displayStartedMessage();
 
+        new AsyncTask<String, Integer, String>() {
+            @Override
+            protected String doInBackground(String... strings) {
+                String txt = "";
+                for (int i = 0; i < 22; i++) {
+                    txt += simpleRead(strings[0]);
+                    publishProgress(i);
+                }
+                return txt;
+            }
+
+            @Override
+            protected void onProgressUpdate(Integer... values) {
+                pb.setProgress(values[0]);
+            }
+
+            @Override
+            protected void onPostExecute(String txt) {
+                displayCompletionMessage();
+                cleanupProgressBar(pb);
+                Log.i("ASYNC RESULT", txt);
+            }
+        }.execute("testout.dat");
     }
 
 
@@ -177,7 +203,7 @@ public class MainActivity extends Activity {
             }
 
             @Override
-            protected void onPostExecute(Void aVoid) {
+            protected void onPostExecute(Void txt) {
                 displayCompletionMessage();
                 cleanupProgressBar(pb);
             }
@@ -207,26 +233,33 @@ public class MainActivity extends Activity {
         }
     }
 
-    protected void simpleRead(){
+    protected String simpleRead(String fileName){
 
         StringBuilder text = new StringBuilder();
         try {
             File sdcard = Environment.getExternalStorageDirectory();
-            File file = new File(sdcard,"testout.dat");
+            File file = new File(sdcard, fileName);
             System.out.println("exception");
 
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;
             while ((line = br.readLine()) != null) {
                 text.append(line);
-                System.out.println("text : "+text+" : end");
+                System.out.println("text : " + text + " : end");
                 text.append('\n');
-            } }
+            }
+            br.close();
+            Thread.sleep(400, 0);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         catch (IOException e) {
             e.printStackTrace();
             System.out.println("exception occurred");
 
         }
+        return text.toString();
 //
 //        TextView tv = (TextView)findViewById(R.id.amount);
 //
@@ -245,7 +278,7 @@ public class MainActivity extends Activity {
     protected void slowWrite(FileOutputStream outStream, String buffer) {
         try {
             outStream.write(buffer.getBytes());
-            Thread.sleep(1500, 0);
+            Thread.sleep(1000, 0);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (IOException e) {
